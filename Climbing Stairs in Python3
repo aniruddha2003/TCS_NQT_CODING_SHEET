@@ -1,0 +1,14 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if(n<=3):
+            return n
+        a = 3
+        b = 2
+        i = 4
+        res = 0
+        while(i<=n):
+            res = a+b
+            b = a
+            a = res
+            i+=1
+        return res
