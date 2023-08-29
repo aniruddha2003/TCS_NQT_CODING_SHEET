@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int climbStairs(int n) {
+        int res;
+        if(n<=3)return n;
+        int a = 3;
+        int b = 2;
+        for(int i=4;i<=n;i++){
+            res = a+b;
+            b = a;
+            a = res;
+        }
+        return res;
+    }
+};
+
+/* this code runs on the Leetcode */
+/* Here is the link of the problem:- https://leetcode.com/problems/climbing-stairs/ */
